@@ -6,7 +6,6 @@ $rs: 'Roboto Slab'
 $os: 'Open Sans'
 $txt: 15px, 'Open Sans', normal
 
-
 .text 
     font: 15px $os
     color: #696980 
@@ -46,6 +45,7 @@ a
     max-width: 1170px
     width: 100%
     margin: 0 auto
+   
 
 .main-page 
     background: url('../images/main-bg.png') no-repeat
@@ -421,19 +421,23 @@ a
     height: 370px  
     margin: 215px auto
 .card
+    display: block
+    margin: 0 auto
     width: 804px
     height: 406px
+    outline: none
     &__photo
         width: 203px
         height: 160px 
         padding-left: 283px
     &__name
+        text-align: center
         font: 24px $rs 
         font-weight: 700
         color: $ac
         letter-spacing: 1.1px
         width: 225px
-        margin: 23px auto 35px
+        margin: 23px auto 32px
         span
             display: block
             font: 15px $os 
@@ -441,17 +445,42 @@ a
             color: #9191b5
             width: 223px
             margin: 0 auto
-            padding: 3px 0 0 20px
+            padding: 3px 0
             letter-spacing: 0.9px
+            text-align: center
     &__text
         font: 15px/28px $os
         font-weight: 400
         color: #9191b5
         text-align: center
         width: 763px
-        height: 70px
-        letter-spacing: 1px
-
+        height: 90px
+        letter-spacing: 0.76px
+.slick-dots
+    display: flex
+    justify-content: center
+    text-align: center
+    list-style-type: none
+    margin-top: 31px
+    padding: 0
+    &>li
+        margin: 0 4px
+        button
+            text-indent: -99999px
+            width: 6px
+            height: 6px
+            border: none
+            border-radius: 20px
+            background-color: $ac
+            padding: 4px
+            line-height: 0
+            font-size: 0
+            cursor: pointer
+            &:focus
+                outline: none
+    &>li.slick-active
+        &>button
+            width: 35px                    
 .slide__point
     display: flex
     justify-content: space-between
